@@ -75,6 +75,7 @@ Il Presidente invita il nuovo Consiglio Direttivo a procedere all'attribuzione d
 Il nuovo Consiglio Direttivo delibera, all'unanimità, la seguente attribuzione delle cariche:
 
 - **Presidente:** {{nuovo_presidente}}
+- **Vicepresidente:** {{nuovo_vicepresidente}}
 - **Segretario:** {{nuovo_segretario}}
 - **Tesoriere:** {{nuovo_tesoriere}}
 
@@ -108,6 +109,8 @@ Letto, approvato e sottoscritto.
 
 {{luogo}}, lì {{data}}
 
-_________________________          _________________________
 
-Il Presidente dell'Assemblea        Il Segretario Verbalizzante
+Il Presidente dell'Assemblea        
+
+
+Il Segretario Verbalizzante

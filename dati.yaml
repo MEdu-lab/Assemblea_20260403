@@ -1,16 +1,16 @@
 # ============================================================
 # DATI DELLA RIUNIONE
 # ============================================================
-titolo: "Verbale Assemblea Straordinaria n. 1/2024"
-data: "15 marzo 2024"
-data-anno: "2024"
-data-giorno: "15"
-data-mese: "marzo"
+titolo: "Verbale Assemblea Straordinaria n. 1/2026"
+data: "8 aprile 2026"
+data-anno: "2026"
+data-giorno: "8"
+data-mese: "aprile"
 ora_inizio: "15:00"
 ora_fine: "18:00"
-luogo: "Sede dell'associazione"
+luogo: "Via Albalonga, 23"
 tipo_riunione: "Assemblea Straordinaria"
-convocazione: "Prima convocazione"  # oppure: "Seconda convocazione"
+convocazione: "Seconda convocazione"  # oppure: "Seconda convocazione"
 
 # ============================================================
 # ASSOCIAZIONE
@@ -23,31 +23,28 @@ nuova_denominazione: "Associazione Culturale NuovoNome ETS"
 # PRESIDENTE E SEGRETARIO DELL'ASSEMBLEA
 # (chi conduce i lavori oggi, non le cariche del nuovo CDA)
 # ============================================================
-presidente_assemblea: "Mario Rossi"
-segretario_assemblea: "Giuseppe Verdi"
+presidente_assemblea: "Marco Di Gasbarro"
+segretario_assemblea: "Marta Mancini"
 
 # ============================================================
 # PARTECIPANTI E VERIFICA QUORUM
 # ============================================================
-n_soci_totale: "10"
+n_soci_totale: "7"
 n_presenti: "7"
-n_deleghe: "1"
-n_aventi_diritto_voto: "8"
-quorum_richiesto: "metà più uno degli aventi diritto al voto (6 su 10)"
+n_deleghe: "0"
+n_aventi_diritto_voto: "7"
+quorum_richiesto: "tutti presenti."
 
 presenti: |
-  - Mario Rossi
-  - Giuseppe Verdi
+  - Marco Di Gasbarro
+  - Marta Mancini
   - Pietro Barale
-  - Marco Ferrari
-  - Anna Bianchi
-  - Carlo Esposito
-  - Francesca Lombardi (con delega di Roberto Mancini)
+  - Giulio Romano De Mattia
+  - Fairouz Ben Alì
+  - David William Morecroft
+  - Simone Memè
 
-assenti: |
-  - Roberto Mancini (delegante Francesca Lombardi)
-  - Sara Conti (giustificata)
-  - Luca Neri (ingiustificato)
+assenti:
 
 # ============================================================
 # ORDINE DEL GIORNO
@@ -64,38 +61,38 @@ ordine_del_giorno: |
 # CESSAZIONE VECCHIO CONSIGLIO DIRETTIVO
 # ============================================================
 motivo_cessazione: "dimissioni volontarie"  # oppure: "scadenza del mandato" / "revoca"
-data_dimissioni: "1 marzo 2024"
+data_dimissioni: "8 aprile 2026"
 
 vecchio_consiglio: |
-  - Mario Rossi (Presidente)
-  - Giuseppe Verdi (Segretario)
-  - Luca Neri (Tesoriere)
-  - Pietro Barale (Consigliere)
-  - Marco Ferrari (Consigliere)
+  - David William Morecroft (Presidente)
+  - Simone Memè (Vicepresidente)
+  - Marta Mancini (Segretario)
+  - Fairouz Ben Alì (Tesoriere)
+  - Marco Di Gasbarro (Consigliere)
+  - Fairouz Ben Alì (Consigliere)
 
 # ============================================================
 # ELEZIONE NUOVO CONSIGLIO DIRETTIVO
 # ============================================================
 candidati_consiglio: |
-  - Anna Bianchi
-  - Carlo Esposito
-  - Francesca Lombardi
-  - Roberto Mancini
-  - Sara Conti
+  - Pietro Barale
+  - Giulio Romano De Mattia
+  - Marco Di Gasbarro
+  - Marta Mancini 
 
 nuovo_consiglio_eletto: |
-  - Anna Bianchi
-  - Carlo Esposito
-  - Francesca Lombardi
-  - Roberto Mancini
-  - Sara Conti
+  - Pietro Barale
+  - Giulio Romano De Mattia
+  - Marco Di Gasbarro
+  - Marta Mancini 
 
 # ============================================================
 # ATTRIBUZIONE CARICHE NUOVO CONSIGLIO DIRETTIVO
 # ============================================================
-nuovo_presidente: "Anna Bianchi"
-nuovo_segretario: "Carlo Esposito"
-nuovo_tesoriere: "Francesca Lombardi"
+nuovo_presidente: "Marco Di Gasbarro"
+nuovo_vicepresidente: "Pietro Barale"
+nuovo_segretario: "Giulio Romano De Mattia"
+nuovo_tesoriere: "Marta Mancini"
 
 # ============================================================
 # STATUTO

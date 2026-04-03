@@ -36,6 +36,11 @@ pandoc --defaults styles/defaults.yml README.md -o output.pdf
 | `styles/titlesec.sty` | Bundled LaTeX package for section title formatting |
 | `styles/wrapfig.sty` | Bundled LaTeX package for figure wrapping |
 | `.github/workflows/assembla_doc_template.yml` | CI pipeline: builds PDF, commits updated README.md, deploys to GitHub Pages |
+| `.github/scripts/get_font.py` | Helper script to read font choice from `styles/config.yml` — **not currently wired into the workflow** and `styles/config.yml` does not exist; ignore unless adding font-switching support |
+
+## CI details
+
+The workflow runs inside `ghcr.io/dmgiulioromano/latex-docker-ubuntu:2026.1-small` (a custom image with TeX Live pre-installed). It installs Pandoc 3.x at runtime. The built PDF is published to GitHub Pages as `latest.pdf` and also uploaded as a timestamped workflow artifact (`verbale-assemblea.pdf-<TIMESTAMP>.pdf`).
 
 ## Template variable system
 

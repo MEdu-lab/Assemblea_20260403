@@ -14,11 +14,11 @@ La riunione è stata regolarmente convocata nei modi e nei termini previsti dall
 
 **Risultano presenti:**
 
-{{presenti}}
+{{presenti    }}
 
 **Risultano assenti:**
 
-{{assenti}}
+{{assenti     }}
 
 **Verifica del quorum:**
 
@@ -42,7 +42,7 @@ Il Presidente invita il socio **{{segretario_assemblea}}** a svolgere le funzion
 
 Il Presidente dichiara aperta la seduta e pone in discussione il seguente ordine del giorno:
 
-{{ordine_del_giorno}}
+{{ordine_del_giorno  }}
 
 ## 5. Svolgimento della riunione
 

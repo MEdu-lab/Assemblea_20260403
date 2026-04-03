@@ -36,13 +36,14 @@ n_aventi_diritto_voto: "7"
 quorum_richiesto: "tutti presenti."
 
 presenti: |
-  - Marco Di Gasbarro  
-  - Marta Mancini  
-  - Pietro Barale  
-  - Giulio Romano De Mattia  
-  - Fairouz Ben Alì  
-  - David William Morecroft  
-  - Simone Memè  
+
+  - Marco Di Gasbarro
+  - Marta Mancini
+  - Pietro Barale
+  - Giulio Romano De Mattia
+  - Fairouz Ben Alì
+  - David William Morecroft
+  - Simone Memè
 
 assenti:
 
@@ -50,6 +51,7 @@ assenti:
 # ORDINE DEL GIORNO
 # ============================================================
 ordine_del_giorno: |
+
   1. Presa d'atto della cessazione del Consiglio Direttivo in carica
   2. Elezione del nuovo Consiglio Direttivo
   3. Attribuzione delle cariche interne al nuovo Consiglio Direttivo
@@ -64,27 +66,29 @@ motivo_cessazione: "dimissioni volontarie"  # oppure: "scadenza del mandato" / "
 data_dimissioni: "8 aprile 2026"
 
 vecchio_consiglio: |
+
   - David William Morecroft (Presidente)
   - Simone Memè (Vicepresidente)
   - Marta Mancini (Segretario)
   - Fairouz Ben Alì (Tesoriere)
   - Marco Di Gasbarro (Consigliere)
-  - Fairouz Ben Alì (Consigliere)
 
 # ============================================================
 # ELEZIONE NUOVO CONSIGLIO DIRETTIVO
 # ============================================================
 candidati_consiglio: |
+
   - Pietro Barale
   - Giulio Romano De Mattia
   - Marco Di Gasbarro
-  - Marta Mancini 
+  - Marta Mancini
 
 nuovo_consiglio_eletto: |
+
   - Pietro Barale
   - Giulio Romano De Mattia
   - Marco Di Gasbarro
-  - Marta Mancini 
+  - Marta Mancini
 
 # ============================================================
 # ATTRIBUZIONE CARICHE NUOVO CONSIGLIO DIRETTIVO

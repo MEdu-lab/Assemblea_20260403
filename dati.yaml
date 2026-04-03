@@ -10,7 +10,7 @@ ora_inizio: "22:00"
 ora_fine: "23:00"
 luogo: "Via Albalonga, 23, 00183, Roma (RM)"
 tipo_riunione: "Assemblea Straordinaria"
-convocazione: "Seconda convocazione"  # oppure: "Seconda convocazione"
+convocazione: "Prima convocazione"  # oppure: "Seconda convocazione"
 
 # ============================================================
 # ASSOCIAZIONE

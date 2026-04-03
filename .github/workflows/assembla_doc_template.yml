@@ -1,0 +1,89 @@
+name: Build Tesina PDF
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '**/**'
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/dmgiulioromano/latex-docker-ubuntu:2026.1-small
+
+    steps:
+    - name: Install all dependencies in one step
+      run: |
+        apt-get update
+        apt-get install -y git python3-pip fonts-liberation wget
+        pip install pyyaml
+        tlmgr update --self
+        tlmgr install framed fvextra
+        
+        # Download in parallelo (background jobs)
+        PANDOC_VERSION=3.8.2
+        wget https://github.com/jgm/pandoc/releases/download/${PANDOC_VERSION}/pandoc-${PANDOC_VERSION}-1-amd64.deb
+        apt-get install -y ./pandoc-${PANDOC_VERSION}-1-amd64.deb
+        pip install -U pandoc-mustache
+        rm pandoc-${PANDOC_VERSION}-1-amd64.deb
+        # Verifica
+        fc-cache -f -v
+     
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Build PDF with Pandoc
+      run: |
+        #TITLE=$(grep '^titolo:' docs/dati.yaml | cut -d':' -f2- | sed 's/^[[:space:]]*//; s/[[:space:]]*$//; s/[*]//g')
+        TITLE="verbale-assemblea.pdf"
+        TIMESTAMP=$(date +%Y%m%d_%H%M%S)
+        PDF_NAME="${TITLE}-${TIMESTAMP}.pdf"
+        rm -rf README.md
+        cp docs/ASSEMBLEA.md README.md
+        pandoc --defaults styles/defaults.yml README.md -o "$PDF_NAME"
+        ls -al
+        echo "PDF_NAME=$PDF_NAME" >> $GITHUB_ENV
+        mkdir -p pages_artifact
+        cp "${PDF_NAME}" pages_artifact/latest.pdf
+        
+    - uses: actions/upload-artifact@v4
+      with:
+        name: "${{ env.PDF_NAME }}"
+        path: "${{ env.PDF_NAME }}"
+        overwrite: true
+ 
+    - name: Upload artifact per Pages
+      uses: actions/upload-pages-artifact@v4
+      with:
+        path: pages_artifact
+
+
+    - name: Commit del documento assemblato
+      run: |
+        cd "$GITHUB_WORKSPACE"
+        git config --global --add safe.directory "$GITHUB_WORKSPACE"
+        git config --global user.email "action@github.com"
+        git config --global user.name "GitHub Action"
+        rm -f *.pdf
+        git add -u
+        git add README.md
+        git diff --staged --quiet || git commit -m "Auto-aggiornamento documento con template [skip ci]"
+        
+    - name: Push delle modifiche
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: ${{ github.ref_name }}
+        
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy su GitHub Pages
+        uses: actions/deploy-pages@v4

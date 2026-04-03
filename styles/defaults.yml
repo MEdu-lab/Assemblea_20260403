@@ -1,0 +1,15 @@
+from: markdown
+to: pdf
+
+pdf-engine: xelatex
+
+template: styles/template.latex
+
+filters:
+  - pandoc-mustache
+  
+variables:
+  documentclass: article
+  fontsize: 11pt
+  geometry: margin=2.5cm
+  mustache: dati.yaml

@@ -14,11 +14,11 @@ La riunione è stata regolarmente convocata nei modi e nei termini previsti dall
 
 **Risultano presenti:**
 
-{{presenti    }}
+{{presenti}}
 
 **Risultano assenti:**
 
-{{assenti     }}
+{{assenti}}
 
 **Verifica del quorum:**
 
@@ -112,5 +112,6 @@ Letto, approvato e sottoscritto.
 
 Il Presidente dell'Assemblea        
 
+\vspace{.5cm}
 
 Il Segretario Verbalizzante

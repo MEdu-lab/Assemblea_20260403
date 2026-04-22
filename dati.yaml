@@ -74,7 +74,7 @@ ordine_del_giorno: |
 # CESSAZIONE VECCHIO CONSIGLIO DIRETTIVO
 # ============================================================
 motivo_cessazione: "dimissioni volontarie"  # oppure: "scadenza del mandato" / "revoca"
-data_dimissioni: "8 aprile 2026"
+data_dimissioni: "24 aprile 2026"
 
 vecchio_consiglio: |
 

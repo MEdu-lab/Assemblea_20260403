@@ -15,24 +15,16 @@ jobs:
   build:
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/dmgiulioromano/latex-docker-ubuntu:2026.1-small
+      image: ghcr.io/dmgiulioromano/pandoc-latex-docker-ubuntu:2026.1-small
 
     steps:
     - name: Install all dependencies in one step
       run: |
         apt-get update
-        apt-get install -y git python3-pip fonts-liberation wget
-        pip install pyyaml
+        apt-get install -y git python3-pip fonts-liberation
+        pip install pyyaml pandoc-mustache
         tlmgr update --self
         tlmgr install framed fvextra
-        
-        # Download in parallelo (background jobs)
-        PANDOC_VERSION=3.8.2
-        wget https://github.com/jgm/pandoc/releases/download/${PANDOC_VERSION}/pandoc-${PANDOC_VERSION}-1-amd64.deb
-        apt-get install -y ./pandoc-${PANDOC_VERSION}-1-amd64.deb
-        pip install -U pandoc-mustache
-        rm pandoc-${PANDOC_VERSION}-1-amd64.deb
-        # Verifica
         fc-cache -f -v
      
     - name: Checkout repository
